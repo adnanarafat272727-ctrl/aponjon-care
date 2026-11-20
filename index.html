@@ -1,0 +1,200 @@
+.<!DOCTYPE html>
+<html lang="bn">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>আপনজন কেয়ার - নার্স ও রোগীর সৌহার্দ্য ও সেবা</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Segoe UI', sans-serif; }
+        body { background: #eef6f6; color: #2c3e50; line-height: 1.6; padding-bottom: 30px; }
+        header { background: linear-gradient(135deg, #00796b, #004d40); color: white; text-align: center; padding: 28px 18px; border-radius: 0 0 25px 25px; box-shadow: 0 4px 12px rgba(0,0,0,0.15); }
+        header h1 { font-size: 26px; margin-bottom: 5px; }
+        header p { font-size: 13.5px; opacity: 0.92; }
+        .container { max-width: 620px; margin: 20px auto; padding: 0 15px; }
+        .nav-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; margin-bottom: 20px; }
+        .tab-btn { padding: 13px 8px; border: none; border-radius: 12px; font-size: 14px; font-weight: bold; cursor: pointer; background: #fff; color: #00695c; box-shadow: 0 2px 6px rgba(0,0,0,0.08); transition: 0.2s; }
+        .tab-btn.active { background: #00796b; color: #fff; }
+        .card { background: #fff; padding: 18px; border-radius: 14px; box-shadow: 0 3px 12px rgba(0,0,0,0.05); margin-bottom: 15px; border-left: 5px solid #00796b; }
+        .card h3 { color: #004d40; margin-bottom: 8px; font-size: 16.5px; }
+        .card ul { padding-left: 18px; }
+        .card ul li { margin-bottom: 7px; font-size: 14px; }
+        .hidden { display: none; }
+        .breath-box { text-align: center; background: #d5f0ed; padding: 20px; border-radius: 14px; margin-bottom: 15px; }
+        .breath-circle { width: 110px; height: 110px; margin: 12px auto; background: #00796b; color: #fff; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: bold; font-size: 13.5px; padding: 8px; transition: transform 4s ease-in-out; }
+        .action-btn { background: #00796b; color: #fff; border: none; padding: 10px 18px; border-radius: 8px; font-size: 14px; font-weight: bold; cursor: pointer; margin-top: 8px; }
+        .calc-group { margin-bottom: 10px; }
+        .calc-group label { display: block; font-size: 13.5px; font-weight: bold; margin-bottom: 4px; }
+        .calc-group input, .calc-group select { width: 100%; padding: 9px; border: 1.5px solid #cbd5e1; border-radius: 8px; font-size: 14.5px; }
+        .result-box { margin-top: 12px; padding: 10px; background: #e8f5e9; border-radius: 8px; font-weight: bold; color: #1b5e20; text-align: center; }
+        .disclaimer { background: #fff8e1; border-left: 4px solid #ffa000; padding: 10px; font-size: 12px; color: #5d4037; border-radius: 8px; margin-top: 18px; }
+        footer { text-align: center; padding-top: 18px; font-size: 12.5px; color: #555; }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>🏥 আপনজন কেয়ার</h1>
+        <p>নার্স, রোগী ও পরিবারের পারস্পরিক শ্রদ্ধা, মানসিক প্রশান্তি ও সেবার সেতুবন্ধন</p>
+    </header>
+
+    <div class="container">
+        <div class="nav-grid">
+            <button class="tab-btn active" onclick="openTab('nurse', this)">👩‍⚕️ নার্সের দায়িত্ব</button>
+            <button class="tab-btn" onclick="openTab('patient', this)">🤝 রোগী ও স্বজনদের আচরণ</button>
+            <button class="tab-btn" onclick="openTab('mental', this)">🧠 মেন্টাল সাপোর্ট</button>
+            <button class="tab-btn" onclick="openTab('calc', this)">🧮 নার্সিং ক্যালকুলেটর</button>
+        </div>
+
+        <div id="nurse">
+            <div class="card">
+                <h3>১. রোগীর প্রতি নার্সের প্রধান দায়িত্ব</h3>
+                <ul>
+                    <li><strong>আন্তরিক ও হাসিমুখে সেবা:</strong> প্রতিটি রোগীকে নিজের আপনজনের মতো সহমর্মিতা ও ধৈর্যের সাথে সেবা দেওয়া।</li>
+                    <li><strong>সঠিক সময়ে চিকিৎসা:</strong> চিকিৎসকের নির্দেশনা অনুযায়ী নির্ভুলভাবে ওষুধ, ইনজেকশন ও স্যালাইন প্রদান করা।</li>
+                    <li><strong>গোপনীয়তা ও মর্যাদা রক্ষা:</strong> রোগীর শারীরিক ও ব্যক্তিগত তথ্যের সর্বোচ্চ গোপনীয়তা বজায় রাখা।</li>
+                </ul>
+            </div>
+            <div class="card">
+                <h3>২. রোগীর পরিবারের প্রতি দায়িত্ব</h3>
+                <ul>
+                    <li><strong>সহজ ভাষায় বুঝিয়ে বলা:</strong> রোগীর বর্তমান অবস্থা এবং চিকিৎসার ধাপগুলো স্বজনদের শান্তভাবে বুঝিয়ে দেওয়া।</li>
+                    <li><strong>মানসিক সাহস জোগানো:</strong> জরুরি মুহূর্তে স্বজনরা আতঙ্কিত হলে তাদের আশ্বস্ত করা এবং সঠিক পরামর্শ দেওয়া।</li>
+                </ul>
+            </div>
+        </div>
+
+        <div id="patient" class="hidden">
+            <div class="card" style="border-left-color: #e67e22;">
+                <h3 style="color: #d35400;">১. নার্সদের প্রতি সম্মানজনক আচরণ</h3>
+                <ul>
+                    <li><strong>পেশাগত মর্যাদা দেওয়া:</strong> নার্সরা দিনরাত অক্লান্ত পরিশ্রম করেন—তাই তাদের সাথে সর্বদা ভদ্র ও সম্মানজনক ভাষায় কথা বলা।</li>
+                    <li><strong>ধৈর্য ধারণ করা:</strong> ওয়ার্ডে একাধিক রোগী থাকলে তাড়াহুড়ো বা উত্তেজিত না হয়ে নার্সদের কাজ করার সুযোগ দেওয়া।</li>
+                </ul>
+            </div>
+            <div class="card" style="border-left-color: #e67e22;">
+                <h3 style="color: #d35400;">২. হাসপাতালে পালনীয় নিয়মাবলি</h3>
+                <ul>
+                    <li><strong>সঠিক তথ্য প্রদান:</strong> রোগীর পূর্বের রোগ, অ্যালার্জি বা চলমান ওষুধের তথ্য কোনো কিছু না লুকিয়ে নার্সকে জানানো।</li>
+                    <li><strong>অতিরিক্ত ভিড় না করা:</strong> ওয়ার্ডের পরিবেশ শান্ত ও জীবাণুমুক্ত রাখতে রোগীর পাশে অপ্রয়োজনীয় ভিড় না করা।</li>
+                </ul>
+            </div>
+        </div>
+
+        <div id="mental" class="hidden">
+            <div class="breath-box">
+                <h3 style="color: #004d40;">🌿 মানসিক প্রশান্তির ব্যায়াম (Breathing)</h3>
+                <p style="font-size: 13px; margin-top: 4px;">দুশ্চিন্তা বা আতঙ্ক হলে নিচের বাটনে চাপ দিয়ে গভীরভাবে শ্বাস নিন:</p>
+                <div class="breath-circle" id="bCircle">প্রস্তুত হোন</div>
+                <button class="action-btn" onclick="runBreath()">ব্যায়াম শুরু করুন</button>
+            </div>
+            <div class="card" style="border-left-color: #2e7d32;">
+                <h3 style="color: #1b5e20;">💚 রোগী ও স্বজনদের জন্য সাহস ও পরামর্শ</h3>
+                <ul>
+                    <li><strong>আতঙ্কিত হবেন না:</strong> মানসিক দুশ্চিন্তা রোগীর সুস্থতায় বাধা দেয়। চিকিৎসক ও নার্সদের ওপর আস্থা রাখুন।</li>
+                    <li><strong>পর্যাপ্ত বিশ্রাম:</strong> রোগীর সেবা করার পাশাপাশি স্বজনদেরও পালাক্রমে বিশ্রাম ও পুষ্টিকর খাবার নেওয়া জরুরি।</li>
+                    <li><strong>জরুরি হেল্পলাইন (বাংলাদেশ):</strong> স্বাস্থ্য বাতায়ন <strong>১৬২৬৩</strong> এবং জাতীয় জরুরি সেবা <strong>৯৯৯</strong> (২৪ ঘণ্টা ফ্রি)।</li>
+                </ul>
+            </div>
+        </div>
+
+        <div id="calc" class="hidden">
+            <div class="card" style="border-left-color: #1565c0;">
+                <h3 style="color: #0d47a1;">💧 IV Drip Rate (স্যালাইন ফোঁটা হিসাব)</h3>
+                <div class="calc-group">
+                    <label>মোট স্যালাইনের পরিমাণ (mL):</label>
+                    <input type="number" id="vol" placeholder="যেমন: 1000">
+                </div>
+                <div class="calc-group">
+                    <label>মোট সময় (ঘণ্টা / Hours):</label>
+                    <input type="number" id="hrs" placeholder="যেমন: 8">
+                </div>
+                <div class="calc-group">
+                    <label>ড্রপ ফ্যাক্টর (Drop Factor):</label>
+                    <select id="df">
+                        <option value="15">১৫ drops/mL (সাধারণ সেট)</option>
+                        <option value="20">২০ drops/mL (স্ট্যান্ডার্ড সেট)</option>
+                        <option value="60">৬০ drops/mL (মাইক্রোড্রিপ / শিশু)</option>
+                    </select>
+                </div>
+                <button class="action-btn" style="background: #1565c0; width: 100%;" onclick="calcDrip()">হিসাব করুন</button>
+                <div class="result-box hidden" id="dripOut"></div>
+            </div>
+
+            <div class="card" style="border-left-color: #6a1b9a;">
+                <h3 style="color: #4a148c;">⚖️ BMI (বডি মাস ইনডেক্স)</h3>
+                <div class="calc-group">
+                    <label>ওজন (কেজি / kg):</label>
+                    <input type="number" id="wt" placeholder="যেমন: 65">
+                </div>
+                <div class="calc-group">
+                    <label>উচ্চতা (সেন্টিমিটার / cm):</label>
+                    <input type="number" id="ht" placeholder="যেমন: 170">
+                </div>
+                <button class="action-btn" style="background: #6a1b9a; width: 100%;" onclick="calcBMI()">BMI দেখুন</button>
+                <div class="result-box hidden" id="bmiOut"></div>
+            </div>
+        </div>
+
+        <div class="disclaimer">
+            <strong>সতর্কতা:</strong> এই অ্যাপটি শুধুমাত্র স্বাস্থ্য সচেতনতা, পারস্পরিক সৌহার্দ্য এবং প্রাথমিক হিসাবের সুবিধার জন্য তৈরি। জরুরি চিকিৎসায় নিবন্ধিত চিকিৎসকের পরামর্শ নিন।
+        </div>
+    </div>
+        <div class="card" style="border-left: 5px solid #d81b60; background: #fff5f8; margin-top: 18px;">
+            <h3 style="color: #ad1457;">💼 প্রিমিয়াম নার্সিং কনসালটেশন (২৪/৭ অনলাইন সেবা)</h3>
+            <p style="font-size: 14px; margin-bottom: 10px;">প্রেসক্রিপশন ও রিপোর্ট বুঝতে, কিংবা বাসায় রোগীর বিশেষ পরিচর্যার পরামর্শ নিতে সরাসরি বিএসসি নার্সের সাথে কথা বলুন।</p>
+                       <ul style="margin-bottom: 12px;">
+                <li><strong>অনলাইন পরামর্শ ফি:</strong> মাত্র ১০০ টাকা (১৫ মিনিট কল/চ্যাট)</li>
+                <li><strong>বিকাশ / নগদ (Send Money):</strong> <span style="color:#d81b60; font-weight:bold;">01601810678</span></li>
+            </ul>
+            <a href="https://wa.me/8801601810678" target="_blank" style="display: block; text-align: center; background-color: #25d366; color: white; padding: 12px; border-radius: 10px; text-decoration: none; font-weight: bold; font-size: 15px;">💬 পেমেন্ট করে হোয়াটসঅ্যাপে মেসেজ দিন</a>
+        </div>
+ .
+        </div>
+
+    <footer>© ২০২৬ আপনজন কেয়ার | পরিকল্পনায়: আদনান (B.Sc in Nursing)</footer>
+    <script>
+        function openTab(id, btn) {
+            ['nurse', 'patient', 'mental', 'calc'].forEach(function(t) {
+                document.getElementById(t).classList.add('hidden');
+            });
+            document.getElementById(id).classList.remove('hidden');
+            document.querySelectorAll('.tab-btn').forEach(function(b) {
+                b.classList.remove('active');
+            });
+            btn.classList.add('active');
+        }
+
+        function runBreath() {
+            var c = document.getElementById('bCircle');
+            c.innerText = "ধীরে শ্বাস নিন...";
+            c.style.transform = "scale(1.25)";
+            setTimeout(function() { c.innerText = "ধরে রাখুন..."; }, 4000);
+            setTimeout(function() { c.innerText = "ধীরে ছাড়ুন..."; c.style.transform = "scale(1)"; }, 7000);
+            setTimeout(function() { c.innerText = "প্রশান্তি অনুভব করুন"; }, 11000);
+        }
+
+        function calcDrip() {
+            var v = parseFloat(document.getElementById('vol').value);
+            var h = parseFloat(document.getElementById('hrs').value);
+            var d = parseFloat(document.getElementById('df').value);
+            var r = document.getElementById('dripOut');
+            r.classList.remove('hidden');
+            if (!v || !h || v <= 0 || h <= 0) { r.innerText = "সঠিক পরিমাণ ও সময় লিখুন।"; return; }
+            r.innerText = "প্রতি মিনিটে ফোঁটা: " + Math.round((v * d) / (h * 60)) + " drops/min";
+        }
+
+        function calcBMI() {
+            var w = parseFloat(document.getElementById('wt').value);
+            var h = parseFloat(document.getElementById('ht').value) / 100;
+            var r = document.getElementById('bmiOut');
+            r.classList.remove('hidden');
+            if (!w || !h || w <= 0 || h <= 0) { r.innerText = "সঠিক ওজন ও উচ্চতা লিখুন।"; return; }
+            var bmi = (w / (h * h)).toFixed(1);
+            var s = bmi < 18.5 ? "কম ওজন" : bmi < 25 ? "স্বাভাবিক ওজন" : bmi < 30 ? "অতিরিক্ত ওজন" : "স্থূলতা";
+            r.innerText = "আপনার BMI: " + bmi + " (" + s + ")";
+        }
+    </script>
+</body>
+</html>
+   
+        .
